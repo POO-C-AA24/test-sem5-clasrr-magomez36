@@ -5,15 +5,23 @@ public class Terreno{
     public double area;
     public double costoFinal;
 
-    public Terreno(double alto, double ancho, double vmc, double area, double costoFinal) {
+    public Terreno(double alto, double ancho, double vmc) {
         this.alto = alto;
         this.ancho = ancho;
         this.vmc = vmc;
-        this.area = area;
-        this.costoFinal = costoFinal;
     }
-
-    @Override
+    
+    public void calcularArea(){
+        this.area = this.ancho * this.alto;
+    }
+    public void calcularCostoTerreno(){
+        costoFinal = area*vmc;
+        if (area > area*vmc)
+            costoFinal *- 0.8;
+        else if (area >= 200)
+            costoFinal *- 0.9;
+    }
+    
     public String toString() {
         return "Terreno{" + "alto=" + alto + ", ancho=" + ancho + ", vmc=" + vmc + ", area=" + area + ", costoFinal=" + costoFinal + '}';
     }
