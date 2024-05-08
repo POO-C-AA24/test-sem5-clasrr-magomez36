@@ -17,9 +17,9 @@ public class Terreno{
     public void calcularCostoTerreno(){
         costoFinal = area*vmc;
         if (area > area*vmc)
-            costoFinal *- 0.8;
+            costoFinal *= 0.8;
         else if (area >= 200)
-            costoFinal *- 0.9;
+            costoFinal *= 0.9;
     }
     
     public String toString() {
