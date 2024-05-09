@@ -1,12 +1,23 @@
+import java.util.Scanner;
 public class TestTerreno {
     public static void main(String[] args) {
-        Terreno t1 = new Terreno(40, 10, 2);
-        Terreno t2 = new Terreno(21, 12, 2);
-        t1.calcularArea();
-        t1.calcularCostoTerreno();
-        System.out.println(t1);
-        t2.calcularArea();
-        t2.calcularCostoTerreno();
-        System.out.println(t2);
+        Scanner teclado = new Scanner(System.in);
+        Terreno arrayTerreno[] = new Terreno[10];
+        int i = 0;
+        String opc;
+        while (true){
+            System.out.println("Dame alto, anmcho y vmc: ");
+            arrayTerreno[i] = new Terreno(teclado.nextDouble(), teclado.nextDouble(), teclado.nextDouble());
+            i++;
+            System.out.println("Desea mas terrenos (S/N): ");
+            opc = teclado.next();
+            if (opc.equals("N") || (i >= arrayTerreno.length)) break;
+        }
+        System.out.println("Los Terrenos Ingresados y Calculados son:");
+        for (Terreno terreno : arrayTerreno){
+            terreno.calcularArea();
+            terreno.calcularCostoTerreno();
+            System.out.println(terreno);
+        }
     }
 }
