@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class TestTerreno {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Terreno arrayTerreno[] = new Terreno[10];
+        Terreno arrayTerreno[] = new Terreno[2];
         int i = 0;
         String opc;
         while (true){
@@ -21,3 +21,4 @@ public class TestTerreno {
         }
     }
 }
+// Manuel Gomez
