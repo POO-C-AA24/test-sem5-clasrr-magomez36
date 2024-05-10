@@ -1,4 +1,4 @@
-public class Terreno{
+public class Terreno {
     public double alto; 
     public double ancho;
     public double vmc;

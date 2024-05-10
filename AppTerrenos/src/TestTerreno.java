@@ -3,7 +3,7 @@ public class TestTerreno {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         Terreno arrayTerreno[] = new Terreno[2];
-        int i = 0;
+        int i = 0, j = 0;
         String opc;
         while (true){
             System.out.println("Dame alto, anmcho y vmc: ");
@@ -18,7 +18,8 @@ public class TestTerreno {
             terreno.calcularArea();
             terreno.calcularCostoTerreno();
             System.out.println(terreno);
+            j++;
+            if (j == i) break;
         }
     }
 }
-// Manuel Gomez
